@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
+
+/* Global styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #e7e7e7;
+  background: rgb(19, 19, 19);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(3, 155, 155);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-brand {
+  width: 7rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.line1 {
+  width: 15px;
+  height: 3px;
+  margin: 5px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 105, 14, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.line2 {
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 105, 14, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.line3 {
+  width: 15px;
+  height: 3px;
+  margin: 5px 0;
+  margin-left: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 105, 14, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.burger-menu-icon {
+  cursor: pointer;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: rgba(55, 55, 55, 0.5);
+  padding: 1.2rem;
+  border-radius: 0% 0% 0% 40%;
+}
+
+.profile-pic {
+  height: 9rem;
+  width: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 1.5rem 0;
+}
+
+.caption {
+  display: block;
+}
+
+.nav-list {
+  width: 24rem;
+  height: 100vh;
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  z-index: 998;
+  transition: all 650ms ease-in-out;
+}
+
+.nav-list.active {
+  right: 0;
+}
+
+.nav-item {
+  margin: 1.2rem 0;
+}
+
+.nav-link {
+  opacity: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #cecece;
+  letter-spacing: 1.5px;
+}
+
+.nav-link:hover {
+  color: rgba(249, 105, 14, 1);
+}
+
+.toggle{
+  background: none;
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px) scaleX(2)
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px) scaleX(2);
+  margin-left: 0px;
+}
+
+@keyframes navLinkAnimate{
+  from{
+      opacity:0;
+      transform: translate(50px)
+  }
+  to{
+    opacity: 1;
+    transform: translate(0px)
+  }
+}
+
+/* Landing Page */
+.landing-page{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 64, 77, 0.9) 0%,
+    rgba( 0, 0, 0, 0.8) 100%
+  ),
+  url("images/landing-page.png") center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.main-message{
+  width: 100%;
+  max-width: 58rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-message h2{
+  letter-spacing: 1.2rem;
+  font-size:2rem;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(27), blink 1s ease-in-out 7s infinite;
+  width: 27ch;
+  margin:auto;
+  border-right: 4px solid rgba(255, 255, 255, 1)
+}
+
+@keyframes typing{
+  75%{
+    width: 0ch;
+    color: rgba(249, 105, 14, 1)
+  }
+  100%{
+    width: 27ch;
+  }
+}
+
+@keyframes blink{
+  0%{
+    border-right: 4px solid rgba(255, 255, 255, 0);
+  }
+  100%{
+    border-right: 4px solid rgb(194, 194, 194);
+  }
+}
+
+.main-message h3{
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: rgba(249, 105, 14, 1);
+  background: linear-gradient(
+    to right,
+    rgba(249, 105, 14, 1) 0%,
+    rgba(102, 51, 153, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-message p {
+  text-transform: none;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.intro-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  margin: 0 9px;
+  background: rgba( 3, 155, 155);
+  border-radius: 2rem;
+  color: #fafafa;
+  padding: 1rem 2.5rem;
+  display:inline-block;
+  margin-top: 2rem;
+  transition: background-color 650ms;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.btn:hover{
+  color:#fafafa;
+  background-color: rgba(189, 72, 0);
+}
+
+.scroll-down i{
+  color: #fafafa;
+  transition: color 650ms;
+  margin-top: 2rem;
+  font-size: 3.5rem;
+}
+
+.scroll-down i:hover{
+  color: rgba(189, 72, 0)
+}
