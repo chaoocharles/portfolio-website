@@ -60,6 +60,8 @@ header {
   padding: 0 1.5rem;
 }
 
+
+
 .nav-brand {
   width: 7rem;
 }
@@ -77,21 +79,17 @@ nav {
   width: 15px;
   height: 3px;
   margin: 5px 0;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 105, 14, 1) 0%,
-    rgb(255, 255, 255) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(249, 105, 14, 1) 0%,
+      rgb(255, 255, 255) 100%);
 }
 
 .line2 {
   width: 30px;
   height: 3px;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 105, 14, 1) 0%,
-    rgb(255, 255, 255) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(249, 105, 14, 1) 0%,
+      rgb(255, 255, 255) 100%);
 }
 
 .line3 {
@@ -99,11 +97,9 @@ nav {
   height: 3px;
   margin: 5px 0;
   margin-left: 15px;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 105, 14, 1) 0%,
-    rgb(255, 255, 255) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(249, 105, 14, 1) 0%,
+      rgb(255, 255, 255) 100%);
 }
 
 .burger-menu-icon {
@@ -186,6 +182,7 @@ nav {
     opacity: 0;
     transform: translate(50px);
   }
+
   to {
     opacity: 1;
     transform: translate(0px);
@@ -196,11 +193,9 @@ nav {
 .landing-page {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-      135deg,
+  background: linear-gradient(135deg,
       rgba(0, 64, 77, 0.9) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    ),
+      rgba(0, 0, 0, 0.8) 100%),
     url("images/landing-page.png") center no-repeat;
   background-size: contain;
   position: relative;
@@ -234,6 +229,7 @@ nav {
     width: 0ch;
     color: rgba(249, 105, 14, 1);
   }
+
   100% {
     width: 27ch;
   }
@@ -243,6 +239,7 @@ nav {
   0% {
     border-right: 4px solid rgba(255, 255, 255, 0);
   }
+
   100% {
     border-right: 4px solid rgb(194, 194, 194);
   }
@@ -252,11 +249,9 @@ nav {
   font-size: 4rem;
   margin: 1rem 0;
   color: rgba(249, 105, 14, 1);
-  background: linear-gradient(
-    to right,
-    rgba(249, 105, 14, 1) 0%,
-    rgba(102, 51, 153, 1) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(249, 105, 14, 1) 0%,
+      rgba(102, 51, 153, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -320,7 +315,7 @@ nav {
   height: 12rem;
   width: auto;
   border-radius: 100%;
-  
+
   margin: 2rem;
   box-shadow: 0 20px 30px 0 rgba(102, 51, 153, 1);
   box-sizing: border-box;
@@ -330,6 +325,27 @@ nav {
 
   margin: 24px;
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+  /* transform: translate(-50%, -50%); */
+
+
+
+}
+
+.about-img:before img {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+
+  box-shadow: 0 20px 30px 0 rgba(102, 51, 153, 1);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 
 .about-text-box {
@@ -352,11 +368,9 @@ nav {
 
 hr {
   margin: 4rem 0;
-  background: linear-gradient(
-    to right,
-    rgba(249, 105, 14, 1) 0%,
-    rgba(102, 51, 153, 1) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(249, 105, 14, 1) 0%,
+      rgba(102, 51, 153, 1) 100%);
   border: 0;
   height: 1px;
 }
@@ -375,9 +389,34 @@ hr {
   margin-bottom: 5rem;
 }
 
+
+
 .title-heading h2 {
   font-size: 2rem;
   margin: 0.5rem 0 1rem 0;
+  display: inline-block;
+  position: relative;
+  color: #fbfdfd;
+}
+.title-heading h2:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+ 
+  background-color: rgba(102, 51, 153, 1) ;
+
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.title-heading h2:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: rgba(102, 51, 153, 1);
 }
 
 .title-heading p {
@@ -389,7 +428,12 @@ hr {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
 }
+
+
 
 .tier-item {
   height: 30rem;
@@ -399,7 +443,13 @@ hr {
   flex-direction: column;
   justify-content: center;
   cursor: default;
+
 }
+
+.tier-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(28, 14, 35, 0.2);
+}
+
 
 .tier-item i {
   font-size: 3.5rem;
@@ -408,11 +458,9 @@ hr {
 .tier-item h2 {
   font-size: 2rem;
   margin: 2rem 0;
-  background: linear-gradient(
-    to right,
-    rgba(249, 105, 14, 1) 0%,
-    rgba(102, 51, 153, 1) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(249, 105, 14, 1) 0%,
+      rgba(102, 51, 153, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -440,7 +488,9 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 0 1.45rem 5rem 1.45rem;
+
 }
+
 
 .project-img {
   flex: 1;
@@ -454,11 +504,9 @@ hr {
 .project-description h2 {
   font-size: 2rem;
   margin: 2rem 0;
-  background: linear-gradient(
-    to right,
-    rgba(249, 105, 14, 1) 0%,
-    rgba(102, 51, 153, 1) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(249, 105, 14, 1) 0%,
+      rgba(102, 51, 153, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -538,12 +586,15 @@ footer a {
   .main-message h3 {
     font-size: 3rem;
   }
+
   .about .container {
     flex-direction: column;
   }
+
   p {
     font-size: 1.3rem;
   }
+
   .title-heading {
     margin: 0;
   }
@@ -551,12 +602,14 @@ footer a {
   .services-tiers {
     gap: 0;
   }
+
   .project-item {
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
     box-shadow: 0 20px 30px 0 rgba(212, 255, 255, 0.15);
   }
+
   .project-img {
     width: 20rem;
   }
@@ -566,6 +619,7 @@ footer a {
   .main-message {
     top: 55%;
   }
+
   .main-message h2 {
     letter-spacing: 1rem;
     font-size: 1.5rem;
@@ -579,14 +633,17 @@ footer a {
   .main-message p {
     font-size: 1.3rem;
   }
+
   .btn {
     border-radius: 0.9rem;
     padding: 0.9rem 0.9rem;
   }
+
   .about-text-box h2 {
     font-size: 3rem;
     margin-bottom: 20px;
   }
+
   .about-text-box p {
     margin: 0 0 2.45rem;
   }
@@ -594,6 +651,7 @@ footer a {
   .title-heading h2 {
     margin-bottom: 2rem;
   }
+
   .title-heading p {
     font-size: 1.3rem;
   }
@@ -607,24 +665,55 @@ footer a {
     font-size: 1.2rem;
   }
 }
+
 .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0.0deg)
+  }
 }
+
 .wrapper {
   display: flex;
   justify-content: left;
@@ -633,13 +722,15 @@ footer a {
 }
 
 .badge {
-    display: inline-block;
-    min-width: 3px; /* pixel unit */
-    padding: 3px 3px; /* pixel unit */
-    border-radius: 10%;
-    font-size: 15px;
-     text-align: center; 
-    background: #7149d05c;
-    color: #fefefe;
-    margin-right: 3px;
+  display: inline-block;
+  min-width: 3px;
+  /* pixel unit */
+  padding: 3px 3px;
+  /* pixel unit */
+  border-radius: 10%;
+  font-size: 15px;
+  text-align: center;
+  background: #7149d05c;
+  color: #fefefe;
+  margin-right: 3px;
 }
