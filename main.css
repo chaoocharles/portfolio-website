@@ -625,3 +625,21 @@ footer a {
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
 }
+.wrapper {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 4vh;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 3px; /* pixel unit */
+    padding: 3px 3px; /* pixel unit */
+    border-radius: 10%;
+    font-size: 15px;
+     text-align: center; 
+    background: #7149d05c;
+    color: #fefefe;
+    margin-right: 3px;
+}
