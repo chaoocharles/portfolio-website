@@ -403,7 +403,7 @@ hr {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
  
@@ -411,12 +411,14 @@ hr {
 
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  margin-top: 2px;
 }
 
 .title-heading h2:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
   color: rgba(102, 51, 153, 1);
+  margin-top: 2px;
 }
 
 .title-heading p {
@@ -447,7 +449,7 @@ hr {
 }
 
 .tier-item:hover {
-  box-shadow: 0 8px 16px 0 rgba(28, 14, 35, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(203, 105, 252, 0.2);
 }
 
 
@@ -530,12 +532,38 @@ hr {
   max-width: 70rem;
   margin: auto;
   padding-top: 5rem;
+  text-align: center;
 }
 
 .contact h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 5rem;
+  display: inline-block;
+  position: relative;
+
+}
+.contact h2:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+ 
+  background-color: rgba(102, 51, 153, 1) ;
+
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  margin-top: 2px;
+}
+
+.contact h2:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: rgba(102, 51, 153, 1);
+  margin-top: 2px;
 }
 
 .contact p {
